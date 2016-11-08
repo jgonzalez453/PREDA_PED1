@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=nombrearchivoentrada
+comment0.target=EntradaConfig(java.lang.String)
+comment0.text=\r\n\ Este\ es\ el\ contructor\ de\ la\ clase\ encargada\ de\ leer\ la\ configuraci\u00F3n\ de\ los\ archios\ de\ entrada\r\n
+comment1.params=
+comment1.target=void\ leerConfig()
+comment1.text=\r\n\ Este\ m\u00E9todo\ lee\ los\ datos\ del\ archivo\ de\ entrada,\ pero\ solo\ los\ datos\ de\ configuraci\u00F3n,\ es\ decir\ el\ n\u00FAmero\ de\ \r\n\ m\u00E1ximo\ de\ Kilometros\ sin\ repostar\ por\ veh\u00EDculo\ y\ el\ n\u00FAmero\ total\ de\ gasolineras\ en\ la\ ruta\r\n
+numComments=2
