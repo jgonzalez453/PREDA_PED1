@@ -17,6 +17,8 @@ public class EntradaConfig
   //Variable usadas para la lectura de el archivo de entrada y la correcta utilización de los datos
   private FileReader fr;
   private BufferedReader br;
+  private String opeA = "";
+  private String opeB = "";
   
   //Contructor
   /**
@@ -47,8 +49,6 @@ public class EntradaConfig
          br = new BufferedReader(fr);
          // Lectura del fichero por lineas y asignación a variable de datos leeidos
          String linea;
-         String opeA = "";
-         String opeB = "";
          int lineaNum = 1;
          while(((linea=br.readLine()) != null)){
            if(linea.trim().isEmpty())
@@ -94,6 +94,7 @@ public class EntradaConfig
       }
   }
 
-  
+  public String getOperandoA(){return this.opeA;}
+  public String getOperandoB(){return this.opeB;}
  
 }

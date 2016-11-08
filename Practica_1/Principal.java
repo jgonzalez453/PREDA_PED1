@@ -1,4 +1,6 @@
 import java.util.*;
+import java.lang.Math;
+import java.math.*;
 
 /**
  * Write a description of class Principal here.
@@ -11,15 +13,15 @@ public class Principal
     // instance variables - replace the example below with your own
     private EntradaConfig datosEntrada;
     private AlgoritmoDyV aDyV;
-    //private BigInteger resultado;
+    private BigInteger resultado;
 
     /**
      * Constructor for objects of class Principal
      */
     public Principal(String nombrearchivoentrada, boolean trazabilidad)
     {
-        // initialise instance variables
         datosEntrada = new EntradaConfig(nombrearchivoentrada);
+        calcularMultiplicacion(trazabilidad);
         /*if(datosEntrada.getOKentrada()){
             datosEntrada.print();
             calcularMultiplicacion(trazabilidad);
@@ -37,14 +39,13 @@ public class Principal
      */
     public void calcularMultiplicacion(boolean trazabilidad)
     {
-        // put your code here
-        //aDyV = new AlgoritmoDyV(, trazabilidad);
-        //resultado  = aDyV.ejecutarAlgoritmoDyV();
+        aDyV = new AlgoritmoDyV(trazabilidad);
+        resultado  = aDyV.ejecutarAlgoritmoDyV(new BigInteger(datosEntrada.getOperandoA()), new BigInteger(datosEntrada.getOperandoB()));
     }
     
   public void print()
   {
-    System.out.println(this.toString());
+    System.out.println("RESULTADO: "+this.resultado);
   }
     
 }
