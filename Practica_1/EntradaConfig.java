@@ -4,8 +4,8 @@ import java.util.*;
 
 /**
  * Esta clase se usa para la lectura parcial de archivos de entrada 
- * Solamente lee los datos de configuración, es decir el número de kilometros máximos sin repostar del vehiculo y 
- * el número de gasolineras en el recorrido.
+ *
+ *
  * 
  * @author José Luis González Muñiz
  * @version 1.00
@@ -37,8 +37,8 @@ public class EntradaConfig
   //Métodos de la clase
   
   /**
-   * Este método lee los datos del archivo de entrada, pero solo los datos de configuración, es decir el número de 
-   * máximo de Kilometros sin repostar por vehículo y el número total de gasolineras en la ruta
+   *
+   *
    */
   private void leerConfig()
   {
