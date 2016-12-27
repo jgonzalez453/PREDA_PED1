@@ -19,6 +19,8 @@ public class EntradaConfig
   private BufferedReader br;
   private String opeA = "";
   private String opeB = "";
+  private boolean bOpeA = false;
+  private boolean bOpeB = false;
   
   //Contructor
   /**
@@ -75,8 +77,20 @@ public class EntradaConfig
                lineaNum = lineaNum+1;
             }
          }
-         System.out.println("MULTIPLICANDO A = "+opeA);
-         System.out.println("MULTIPLICANDO B = "+opeB);
+         if (opeA.matches("[0-9]+")){
+             System.out.println("MULTIPLICANDO A = "+opeA);
+             bOpeA = true;
+         }else
+         {
+             System.out.println("Multiplicando A no es númerico");
+         }
+         if (opeB.matches("[0-9]+")){
+             System.out.println("MULTIPLICANDO B = "+opeB);
+             bOpeB = true;
+         }else
+         {
+             System.out.println("Multiplicando B no es númerico");
+         }
       }
       catch(Exception e){
          e.printStackTrace();
@@ -94,6 +108,11 @@ public class EntradaConfig
       }
   }
 
+  public boolean comprobarDatos()
+  {
+      if(bOpeA && bOpeB){return true;}
+      else{return false;}
+  }
   public String getOperandoA(){return this.opeA;}
   public String getOperandoB(){return this.opeB;}
  

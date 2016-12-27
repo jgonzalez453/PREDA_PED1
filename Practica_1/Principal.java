@@ -21,7 +21,11 @@ public class Principal
     public Principal(String nombrearchivoentrada, boolean trazabilidad)
     {
         datosEntrada = new EntradaConfig(nombrearchivoentrada);
-        calcularMultiplicacion(trazabilidad);
+        if(datosEntrada.comprobarDatos()){
+            calcularMultiplicacion(trazabilidad);
+        }else{
+            System.out.println("Los datos del fichero de entrada no son correctos, no se puede ejecutar el algoritmo de multiplicación");
+        }
         /*if(datosEntrada.getOKentrada()){
             datosEntrada.print();
             calcularMultiplicacion(trazabilidad);
